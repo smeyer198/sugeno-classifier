@@ -1,7 +1,0 @@
-\babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Installation}{2}{}%
-\contentsline {section}{\numberline {2}Schnittstelle}{2}{}%
-\contentsline {section}{\numberline {3}Beispiele}{3}{}%
-\contentsline {subsection}{\numberline {3.1}Einführendes Beispiel}{3}{}%
-\contentsline {subsection}{\numberline {3.2}Verwendung von Hyperparametern}{3}{}%
-\contentsline {subsection}{\numberline {3.3}Wahl von verschiedenen Klassenlabels}{3}{}%
