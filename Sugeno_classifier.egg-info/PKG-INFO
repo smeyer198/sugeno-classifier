@@ -1,10 +1,112 @@
-Metadata-Version: 1.0
-Name: Sugeno-classifier
-Version: 1.0
-Summary: UNKNOWN
-Home-page: UNKNOWN
+Metadata-Version: 2.1
+Name: sugeno-classifier
+Version: 1.1.0
+Summary: Implementation of the Sugeno classifier
+Home-page: https://github.com/smeyer198/sugeno-classifier
 Author: Sven Meyer
-Author-email: UNKNOWN
-License: UNKNOWN
-Description: UNKNOWN
+License: MIT
+Description: # Sugeno classifier
+        
+        Implementation of the Sugeno classifier, which was presented in the paper "Machine Learning with the Sugeno Integral: The Case of Binary Classification" [[1]](#1).
+        
+        # Installation
+        
+        ## Dependencies
+        
+        The Sugeno classifier requires:
+        * Python (>=3.8)
+        * NumPy (>=1.19.0)
+        * scikit-learn (>=0.24.1)
+        * PuLP (>=2.4)
+        
+        ## User installation
+        
+        Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the Sugeno classifier.
+        
+        ```bash
+        pip install sugeno-classifier
+        ```
+        
+        # Usage
+        
+        The implementation is compatible to [scikit-learn](https://scikit-learn.org/stable/) and can be used like other algorithms from this library. In order to use the Sugeno classifier, import the class **SugenoClassifier** from the module **sugeno_classifier** from the package **classifier**. Some examples are shown below:
+        
+        ## First example
+        Use the contructor and the function **fit** to initialize the Sugeno classifier for a given dataset.
+        
+        ```python
+        >>> from classifier.sugeno_classifier import SugenoClassifier
+        >>> X = [[1, 3, 2],
+        ...      [2, 1, 3]]
+        >>> y = [0, 1]
+        >>> sc = SugenoClassifier()
+        >>> sc.fit(X, y)
+        ```
+        Use the function **predict** to classify samples.
+        
+        ```python
+        >>> Z = [[3, 2, 1],
+        ...      [1, 2, 3]]
+        >>> sc.predict(Z)
+        array([0, 1])
+        ```
+        
+        ## Example with hyperparameters
+        
+        The Sugeno classifier has two hyperparameter, the maxitivity and the margin, which can be set in the constructor. Both can influence the classification performance. See [[1]](#1) for more information.
+        
+        ```python
+        >>> from classifier.sugeno_classifier import SugenoClassifier
+        >>> X = [[1, 3, 2],
+        ...      [2, 1, 3]]
+        >>> y = [0, 1]
+        >>> sc = SugenoClassifier(maxitivity=2, margin=0.01)
+        >>> sc.fit(X, y)
+        ```
+        Again, the function **predict** can be used to classify samples. Note the different output compared to the first example.
+        
+        ```python
+        >>> Z = [[3, 2, 1],
+        ...      [1, 2, 3]]
+        >>> sc.predict(Z)
+        array([1, 1])
+        ```
+        
+        ## Example with different class labels
+        The classes do not have to be labeled with 0 and 1, they can be any integer numbers or strings. The label, which is smaller in terms of the relation < or lexicographically ordering, is assigned to negative class and the other to the positive class.
+        
+        The first example contains the class labels 2 and 4. Label 2 is assigned to the negative class and label 4 is assigned to the positive class because of 2<4.
+        
+        ```python
+        >>> from classifier.sugeno_classifier import SugenoClassifier
+        >>> X = [[1, 3, 2],
+        ...      [2, 1, 3]]
+        >>> y = [2, 4]
+        >>> sc = SugenoClassifier()
+        >>> sc.fit(X, y)
+        >>> Z = [[3, 2, 1],
+        ...      [1, 2, 3]]
+        >>> sc.predict(Z)
+        array([2, 4])
+        ```
+        The second example contains the class labels 'one' and 'two'. Label 'one' is assigned to the negative class and label 'two' is assigned to the positive class because 'one' comes lexicographically first.
+        ```python
+        >>> from classifier.sugeno_classifier import SugenoClassifier
+        >>> X = [[1, 3, 2],
+        ...      [2, 1, 3]]
+        >>> y = ['one', 'two']
+        >>> sc = SugenoClassifier()
+        >>> sc.fit(X, y)
+        >>> Z = [[3, 2, 1],
+        ...      [1, 2, 3]]
+        >>> sc.predict(Z)
+        array(['one', 'two'])
+        ```
+        # License
+        [MIT](https://choosealicense.com/licenses/mit/)
+        
+        # References
+        [1] Sadegh Abbaszadeh and Eyke Hüllermeier. Machine Learning with the Sugeno Integral: The Case of Binary Classication. 2019.
 Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown

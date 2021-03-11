@@ -66,7 +66,7 @@ array([1, 1])
 ```
 
 ## Example with different class labels
-The classes do not have to be labeled with 0 and 1, they can be any integer numbers or strings. The label, which is smaller in terms of the relation < or lexicographically ordering, is assigned to negative class and the other to the positive class.
+The classes do not have to be labeled with 0 and 1, they can be any integer numbers or strings. The label, which is smaller in terms of the relation < or lexicographically ordering, is assigned to negative class and the other one to the positive class.
 
 The first example contains the class labels 2 and 4. Label 2 is assigned to the negative class and label 4 is assigned to the positive class because of 2<4.
 
@@ -95,9 +95,8 @@ The second example contains the class labels 'one' and 'two'. Label 'one' is ass
 >>> sc.predict(Z)
 array(['one', 'two'])
 ```
-
 # License
 [MIT](https://choosealicense.com/licenses/mit/)
 
 # References
-[1] Sadegh Abbaszadeh and Eyke Hullermeier. Machine Learning with the Sugeno Integral: The Case of Binary Classication. 2019.
+[1] Sadegh Abbaszadeh and Eyke Hüllermeier. Machine Learning with the Sugeno Integral: The Case of Binary Classication. 2019.

@@ -1,4 +1,6 @@
 README.md
+README.rst
+setup.cfg
 setup.py
 Sugeno_classifier.egg-info/PKG-INFO
 Sugeno_classifier.egg-info/SOURCES.txt
@@ -13,9 +15,12 @@ classifier/mediator/mediator.py
 classifier/mediator/predictor.py
 classifier/mediator/components/__init__.py
 classifier/mediator/components/capacity.py
-classifier/mediator/components/extended_threshold.py
 classifier/mediator/components/feature_transformation.py
 classifier/mediator/components/helper.py
 classifier/mediator/components/sugeno_integral.py
 classifier/mediator/components/threshold.py
-classifier/mediator/components/threshold_scipy.py
+sugeno_classifier.egg-info/PKG-INFO
+sugeno_classifier.egg-info/SOURCES.txt
+sugeno_classifier.egg-info/dependency_links.txt
+sugeno_classifier.egg-info/requires.txt
+sugeno_classifier.egg-info/top_level.txt
