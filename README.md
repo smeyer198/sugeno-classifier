@@ -99,4 +99,4 @@ array(['one', 'two'])
 [MIT](https://choosealicense.com/licenses/mit/)
 
 # References
-[1] Sadegh Abbaszadeh and Eyke Hüllermeier. Machine Learning with the Sugeno Integral: The Case of Binary Classication. 2019.
+[1] Sadegh Abbaszadeh and Eyke Hüllermeier. Machine Learning with the Sugeno Integral: The Case of Binary Classication. 2020.
