@@ -1,5 +1,4 @@
 README.md
-README.rst
 setup.cfg
 setup.py
 Sugeno_classifier.egg-info/PKG-INFO
